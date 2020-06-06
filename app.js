@@ -23,6 +23,10 @@ io.on('connection', (socket) => {
     console.log("play/pause: ", msg);
     io.emit('play/pause', msg);
   });
+  socket.on('sync', (time) => {
+    console.log("sync: ", time);
+    io.emit('sync', time);
+  });
 });
 
 
