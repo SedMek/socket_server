@@ -27,6 +27,10 @@ io.on('connection', (socket) => {
     console.log("sync: ", time);
     io.emit('sync', time);
   });
+  socket.on('shareUrl', (url) => {
+    console.log("shareUrl: ", url);
+    io.emit('shareUrl', url);
+  });
 });
 
 
